@@ -4,6 +4,9 @@ var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
 var app     = express();
+var http = require('http');
+
+app.set('port', process.env.PORT || 3000);
 
 app.get('/api/food/:item', function(req, res){
 
@@ -93,6 +96,8 @@ app.get('/api/food/:item', function(req, res){
 
 
 
-app.listen('8081')
-console.log('Magic happens on port 8081');
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
+});
+
 exports = module.exports = app; 
