@@ -1,0 +1,12 @@
+{
+  "name"         : "nutrition-api",
+  "version"      : "0.0.1",
+  "description"  : "Scrapes nutrition information",
+  "main"         : "server.js",
+  "author"       : "Ojas Mhetar",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest"
+  }
+}
